@@ -1,0 +1,8 @@
+# Environment variables
+.env
+
+# Firebase service account key
+serviceAccountKey.json
+
+# Python virtual environment
+venv/
