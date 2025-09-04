@@ -1,0 +1,23 @@
+[build]
+  publish = "public"
+
+[build.environment]
+  # Python version for the build
+  PYTHON_VERSION = "3.9"
+
+[functions]
+  directory = "netlify/functions"
+  python_runtime = "3.9"
+
+[[redirects]]
+  from = "/.netlify/functions/recipe-api"
+  to = "/.netlify/functions/recipe-api"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
