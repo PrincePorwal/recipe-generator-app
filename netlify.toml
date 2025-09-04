@@ -1,5 +1,4 @@
 [build]
-  # This command is essential to install Flask, Firebase, etc.
   command = "pip install -r requirements.txt"
   publish = "public"
 
@@ -8,10 +7,8 @@
 
 [functions]
   directory = "netlify/functions"
-  # DO NOT add the python_runtime line here
 
 [[redirects]]
-  # This makes your function available at yoursite.com/api/
   from = "/api/*"
   to = "/.netlify/functions/recipe-api/:splat"
   status = 200
